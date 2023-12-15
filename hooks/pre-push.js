@@ -31,9 +31,15 @@ try {
 
   const url = "http://localhost:3000/write";
 
-  const result = fetch(url, { method: "POST", body: data });
-  console.log(result);
-  process.exit(0);
+  fetch(url, { method: "POST", body: data })
+    .then((response) => {
+      console.log(response);
+      process.exit(0);
+    })
+    .catch((error) => {
+      console.log(error);
+      process.exit(1);
+    });
 } catch (error) {
   console.log(error);
   process.exit(1);
