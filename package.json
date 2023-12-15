@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cp hooks/pre-push.js ../../.git/hooks && chmod +x ../../.git/hooks/pre-push.js"
+    "postinstall": "cp hooks/pre-push.js ../../.git/hooks && chmod +x ../../.git/hooks/pre-push.js && chmod +x setup.sh && ./setup.sh"
   },
   "author": "",
   "license": "ISC"
