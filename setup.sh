@@ -2,6 +2,8 @@
 
 PRE_PUSH_HOOK="../../.git/hooks/pre-push"
 
+touch ../../ghostwriter_template.md
+
 # TODO: Improve if / else statement
 if [ -f "$PRE_PUSH_HOOK" ]; then
     # Append custom logic to existing pre-push hook

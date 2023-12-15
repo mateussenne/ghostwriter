@@ -6,7 +6,9 @@ const URI = require("uri-js");
 // Read template content from file
 console.log("starting");
 try {
-  const template = execSync("cat template.md", { encoding: "utf-8" });
+  const template = execSync("cat ghostwriter-template.md", {
+    encoding: "utf-8",
+  });
   if (!template) {
     return console.log("No ghostwriter template found");
   }
@@ -33,7 +35,7 @@ try {
 
   fetch(url, { method: "POST", body: data })
     .then((response) => {
-      console.log(response);
+      console.log(JSON.stringify(response.body));
       process.exit(0);
     })
     .catch((error) => {
