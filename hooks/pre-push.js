@@ -4,8 +4,12 @@ const { URI } = require("uri-js");
 // Read template content from file
 const template = execSync("cat template.md", { encoding: "utf-8" });
 
+// Get current git branch
+
 // Get the git diff
-const diffs = execSync("git diff", { encoding: "utf-8" });
+const diffs = execSync("git diff..git rev-parse --abbrev-ref HEAD", {
+  encoding: "utf-8",
+});
 
 // Function to escape special characters in a string
 function escapeString(str) {
