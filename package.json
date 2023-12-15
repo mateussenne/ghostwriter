@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "uri-js": "^4.4.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cp hooks/pre-push.js ../../../.git/hooks && chmod +x ../../../.git/hooks/pre-push.js"
   },
   "author": "",
   "license": "ISC"
