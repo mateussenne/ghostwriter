@@ -3,6 +3,11 @@
 const { execSync } = require("child_process");
 const URI = require("uri-js");
 
+// Function to escape special characters in a string
+const escapeString = (str) => {
+  return URI.serialize(URI.parse(str));
+};
+
 async function prePush() {
   const template = execSync("cat ghostwriter-template.md", {
     encoding: "utf-8",
@@ -48,8 +53,3 @@ prePush()
     console.log(error);
     process.exit(1);
   });
-
-// Function to escape special characters in a string
-const escapeString = (str) => {
-  return URI.serialize(URI.parse(str));
-};
