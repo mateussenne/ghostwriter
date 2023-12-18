@@ -2,7 +2,7 @@
 
 PRE_PUSH_HOOK="../../.git/hooks/pre-push"
 
-touch ../../ghostwriter_template.md
+touch ../../ghostwriter-template.md
 
 # TODO: Improve if / else statement
 if [ -f "$PRE_PUSH_HOOK" ]; then
