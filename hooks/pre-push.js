@@ -43,6 +43,7 @@ async function prePush() {
   return result;
 }
 
+// Call async prePush function
 prePush()
   .then(async (response) => {
     const parsedResponse = await response.text();
