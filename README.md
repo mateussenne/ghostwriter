@@ -4,7 +4,7 @@ Ghostwriter is a tool designed to streamline the process of creating pull reques
 
 By analyzing a customizable PR template provided by you, Ghostwriter leverages the capabilities of artificial intelligence to craft clear and concise PRs, saving you time and effort in the code review process.
 
-### Getting Started
+## Getting Started
 
 1. Install the npm package:
 
@@ -17,11 +17,11 @@ By analyzing a customizable PR template provided by you, Ghostwriter leverages t
 
   - Now, you can continue working as usual. When you attempt to push your branch, Ghostwriter will seamlessly take action, composing the PR for you.
 
-### Ghostwriter in action  
+## Ghostwriter in action  
 ![gw-gif](https://github.com/mateussenne/ghostwriter/assets/13854939/f3c91aeb-64ca-43b3-b366-ad96940ee3bd) 
 
 
-### Generated PR from the example above
+## Generated PR from the example above
 - In the example above, we created a new branch `feature` and have systematically excluded the initial elements from a basic Next.js application and introduced a straightforward `<h1>` tag containing the greeting text.
 The corresponding pull request (PR) reflecting these changes is provided below:
 
