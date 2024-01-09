@@ -4,13 +4,15 @@ Ghostwriter is a tool designed to streamline the process of creating pull reques
 
 By analyzing a customizable PR template provided by you, Ghostwriter leverages the capabilities of artificial intelligence to craft clear and concise PRs, saving you time and effort in the code review process.
 
+## Experimental Phase
+- The tool is currently in an experimental phase. Installation, as outlined below, will **not** result in the intended functionality.
+
 ## Getting Started
-
 1. Install the npm package:
-
 ```bash
   npm install gw-ghostwriter
 ```
+
 2. Configure the template to suit your preferences:
 
   - After installing Ghostwriter, a default template will be created under the file `ghostwriter-template.md`. You can configure according to your liking by just adding what you would like ghostwriter to follow.
