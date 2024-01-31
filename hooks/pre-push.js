@@ -2,6 +2,7 @@
 
 const { execSync } = require("child_process");
 const URI = require("uri-js");
+require("dotenv").config();
 
 // Function to escape special characters in a string
 const escapeString = (str) => {
@@ -37,7 +38,10 @@ async function prePush() {
   const url = "http://localhost:3000/write";
   const result = await fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      Authorization: process.env.OPEN_API_KEY,
+      "Content-Type": "application/json",
+    },
     body: data,
   });
   return result;
