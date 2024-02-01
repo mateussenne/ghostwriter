@@ -39,7 +39,10 @@ async function prePush() {
   const result = await fetch(url, {
     method: "POST",
     headers: {
-      Authorization: process.env.OPEN_AI_API_KEY,
+      Authorization: JSON.stringify({
+        organizationId: process.env.OPENAI_ORGANIZATION_ID,
+        apiKey: process.env.OPENAI_API_KEY,
+      }),
       "Content-Type": "application/json",
     },
     body: data,
