@@ -2,6 +2,7 @@
 
 const { execSync } = require("child_process");
 const URI = require("uri-js");
+const { writePullRequest } = require("../writer");
 require("dotenv").config();
 
 // Function to escape special characters in a string
@@ -29,24 +30,14 @@ async function prePush() {
   const escapedTemplate = escapeString(template);
   const escapedDiffs = escapeString(diffs);
 
-  // Create JSON data without newlines
-  const data = JSON.stringify({
-    template: escapedTemplate,
-    diffs: escapedDiffs,
+  // Stringify diffs and template to remove newlines
+  const result = await writePullRequest({
+    diffs: JSON.stringify(escapedDiffs),
+    template: JSON.stringify(escapedTemplate),
+    apiKey,
+    organizationId,
   });
 
-  const url = "http://localhost:3000/write";
-  const result = await fetch(url, {
-    method: "POST",
-    headers: {
-      Authorization: JSON.stringify({
-        organizationId: process.env.OPENAI_ORGANIZATION_ID,
-        apiKey: process.env.OPENAI_API_KEY,
-      }),
-      "Content-Type": "application/json",
-    },
-    body: data,
-  });
   return result;
 }
 
