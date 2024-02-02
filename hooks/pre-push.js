@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-const { execSync } = require("child_process");
-const URI = require("uri-js");
-const { writePullRequest } = require("../writer");
-require("dotenv").config();
+import { execSync } from "child_process";
+import * as URI from "uri-js";
+import { writePullRequest } from "../writer.js";
 
 // Function to escape special characters in a string
 const escapeString = (str) => {
@@ -30,6 +29,7 @@ async function prePush() {
   const escapedTemplate = escapeString(template);
   const escapedDiffs = escapeString(diffs);
 
+  console.log("let's ride");
   // Stringify diffs and template to remove newlines
   const result = await writePullRequest({
     diffs: JSON.stringify(escapedDiffs),

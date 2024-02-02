@@ -1,5 +1,4 @@
 import OpenAI from "openai";
-import "dotenv/config";
 
 export const writePullRequest = async ({
   template,
