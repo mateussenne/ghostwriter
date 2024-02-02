@@ -1,4 +1,4 @@
-import OpenAI from "openai";
+OpenAI = require("openai");
 
 export const writePullRequest = async ({
   template,

@@ -1,8 +1,14 @@
 #!/usr/bin/env node
 
-import { execSync } from "child_process";
-import * as URI from "uri-js";
-import { writePullRequest } from "../writer.js";
+const { execSync } = require("child_process");
+const URI = require("uri-js");
+const { writePullRequest } = require("../writer.js");
+
+require("dotenv").config();
+
+// Load access keys from .env file
+const apiKey = process.env.OPENAI_API_KEY;
+const organizationId = process.env.OPENAI_ORGANIZATION_ID;
 
 // Function to escape special characters in a string
 const escapeString = (str) => {
