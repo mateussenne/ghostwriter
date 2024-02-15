@@ -17,7 +17,7 @@ async function writePullRequest({ template, diffs, apiKey, organizationId }) {
   const content =
     "Using the following template:" +
     decodeURIComponent(template) +
-    "Write a detailed Pull request in markdown taking in consideration the code changes below" +
+    "Write a detailed Pull request in markdown taking in consideration the code changes below but do not the diffs" +
     decodeURIComponent(diffs);
   try {
     const completion = await openai.chat.completions.create({
