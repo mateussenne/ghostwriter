@@ -40,7 +40,6 @@ async function prePush() {
   const escapedTemplate = escapeString(template);
   const escapedDiffs = escapeString(diffs);
 
-  console.log("let's ride");
   // Stringify diffs and template to remove newlines
   const result = await writePullRequest({
     diffs: JSON.stringify(escapedDiffs),

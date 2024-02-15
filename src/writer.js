@@ -28,11 +28,11 @@ async function writePullRequest({ template, diffs, apiKey, organizationId }) {
     if (!response?.content) {
       throw "There was an error processing your pull request";
     }
-    res.send("\n\n\n" + decodeURIComponent(response?.content + "\n\n\n"));
+    return "\n\n\n" + decodeURIComponent(response?.content + "\n\n\n");
   } catch (e) {
     console.error(e);
     const response = "Could not connect with ChatGPT";
-    res.send(response);
+    return response;
   }
 }
 
