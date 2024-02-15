@@ -54,8 +54,7 @@ async function prePush() {
 // Call async prePush function
 prePush()
   .then(async (response) => {
-    const parsedResponse = await response.text();
-    console.log(parsedResponse);
+    console.log(response);
     process.exit(0);
   })
   .catch((error) => {
