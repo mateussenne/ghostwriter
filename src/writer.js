@@ -22,7 +22,7 @@ async function writePullRequest({ template, diffs, apiKey, organizationId }) {
   try {
     const completion = await openai.chat.completions.create({
       messages: [{ role: "user", content }],
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-0125",
     });
     const response = completion.choices[0]?.message;
     if (!response?.content) {
