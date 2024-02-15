@@ -2,7 +2,7 @@
 
 const { execSync } = require("child_process");
 const URI = require("uri-js");
-const { writePullRequest } = require("../src/writer.js");
+const { writePullRequest } = require("../src/writer");
 
 require("dotenv").config();
 
