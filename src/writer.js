@@ -1,11 +1,6 @@
 OpenAI = require("openai");
 
-export async function writePullRequest({
-  template,
-  diffs,
-  apiKey,
-  organizationId,
-}) {
+async function writePullRequest({ template, diffs, apiKey, organizationId }) {
   if (!apiKey) {
     throw "Open AI key not configured. Please add $OPENAI_API_KEY it to your .env file and try again.";
   }
@@ -40,3 +35,5 @@ export async function writePullRequest({
     res.send(response);
   }
 }
+
+module.exports = { writePullRequest };
