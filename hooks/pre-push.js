@@ -5,7 +5,7 @@ const URI = require("uri-js");
 const path = require("path");
 const writer = path.join(
   __dirname,
-  "../../node-modules/gw-ghostwriter/src/writer.js"
+  "../../node_modules/gw-ghostwriter/src/writer.js"
 );
 const { writePullRequest } = require(writer);
 
