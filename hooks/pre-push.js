@@ -2,8 +2,9 @@
 
 const { execSync } = require("child_process");
 const URI = require("uri-js");
-const { writer } = require("../src");
-const { writePullRequest } = writer;
+const path = require("path");
+const writer = path.join(__dirname, "../../src/writer.js");
+const { writePullRequest } = require(writer);
 
 require("dotenv").config();
 
