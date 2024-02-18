@@ -5,15 +5,23 @@ Ghostwriter is a tool designed to streamline the process of creating pull reques
 By analyzing a customizable PR template provided by you, Ghostwriter leverages the capabilities of artificial intelligence to craft clear and concise PRs, saving you time and effort in the code review process.
 
 ## Experimental Phase
-- The tool is currently in an experimental phase. Installation, as outlined below, will **not** result in the intended functionality.
+- The tool is currently in an experimental phase. Installation, as outlined below, may not fully result in the intended functionality.
 
 ## Getting Started
-1. Install the npm package:
+**Disclaimer:** Ghostwriter employs `GPT-4-turbo` for crafting your Pull Request. To utilize this tool, you'll need an account with sufficient funds on OpenAI, which can be obtained at https://platform.openai.com/. Ghostwriter will evaluate the differences between the working branch and the main branch using the `git diff` command. Consequently, the greater the extent of your changes, the more funds Ghostwriter will consume. For more insights into how GPT consumes your funds, please refer to the [tokenizer](https://platform.openai.com/tokenizer).
+
+1. Begin by inserting your organization ID and API keys into the `.env` file:
+ ```
+  OPENAI_ORGANIZATION_ID="your_org_id"
+  OPENAI_API_KEY="your_open_ai_key"
+```
+
+2. Install the npm package:
 ```bash
   npm install gw-ghostwriter
 ```
 
-2. Configure the template to suit your preferences:
+3. Configure the template to suit your preferences:
 
   - After installing Ghostwriter, a default template will be created under the file `ghostwriter-template.md`. You can configure according to your liking by just adding what you would like ghostwriter to follow.
 
