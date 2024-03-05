@@ -5,7 +5,7 @@ Ghostwriter is a tool designed to streamline the process of creating pull reques
 By analyzing a customizable PR template provided by you, Ghostwriter leverages the capabilities of artificial intelligence to craft clear and concise PRs, saving you time and effort in the code review process.
 
 ## Experimental Phase
-- The tool is currently in an experimental phase. Installation, as outlined below, may not fully result in the intended functionality.
+- The tool is a **side project**  and currently in an experimental phase. Installation, as outlined below, may not fully result in the intended functionality.
 - **Uninstalling is not working at the moment** . You are not going to able to remove all ghostwriter files from your project by just running uninstall.
 
 ## Getting Started
@@ -54,3 +54,12 @@ The corresponding pull request (PR) reflecting these changes is provided below:
 - Verfified that the "Hello" text is displayed correctly on the page.
 - Checked the layout and styling of the page to ensure that it still looks visually appealing
 ```
+
+## Important  
+**Limitation of Liability**: The use of Ghostwriter is at your own risk. We do not provide any warranty or guarantee regarding its functionality. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability.
+
+**OpenAI Terms of Service**: By using Ghostwriter, you agree to comply with OpenAI's [Terms of Service](https://openai.com/terms).
+
+**Usage Costs**: Using Ghostwriter will consume funds from your OpenAI account. Costs are calculated based on the extent of your changes. Please review your OpenAI account settings for more information on pricing.
+
+**Privacy Policy**: Ghostwriter does not collect any personal data from users. However, it interacts with OpenAI's API, and users are subject to OpenAI's privacy policy. Please review OpenAI's [Privacy Policy](https://openai.com/privacy) for more information.
