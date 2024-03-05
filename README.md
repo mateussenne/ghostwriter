@@ -6,7 +6,7 @@ By analyzing a customizable PR template provided by you, Ghostwriter leverages t
 
 ## Experimental Phase
 - The tool is currently in an experimental phase. Installation, as outlined below, may not fully result in the intended functionality.
-- Uninstalling is not ready yet. So you might not be able to remove all ghostwriter files from your project.
+- **Uninstalling is not working at the moment** . You are not going to able to remove all ghostwriter files from your project by just running uninstall.
 
 ## Getting Started
 **Disclaimer:** Ghostwriter employs `GPT-4-turbo` for crafting your Pull Request. To utilize this tool, you'll need an account with sufficient funds on OpenAI, which can be obtained at https://platform.openai.com/. Ghostwriter will evaluate the differences between the working branch and the main branch using the `git diff` command. Consequently, the greater the extent of your changes, the more funds Ghostwriter will consume. For more insights into how GPT consumes your funds, please refer to the [tokenizer](https://platform.openai.com/tokenizer).
